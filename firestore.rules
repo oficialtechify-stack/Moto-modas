@@ -1,0 +1,56 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Default-deny catch-all safety net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Reusable, hardened global helpers
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    function isEmailVerified() {
+      return request.auth.token.email_verified == true;
+    }
+
+    function isAdmin() {
+      return isSignedIn() && 
+             request.auth.token.email == 'aigerakabane81983521523@gmail.com';
+    }
+
+    function isValidId(id) {
+       return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    // Products Rules
+    match /products/{productId} {
+      allow read: if true; // Publicly readable catalog
+      allow create, update, delete: if isAdmin();
+    }
+
+    // Promotions Rules
+    match /promotions/{promotionId} {
+      allow read: if true; // Publicly readable seasonal banners
+      allow create, update, delete: if isAdmin();
+    }
+
+    // Orders Rules
+    match /orders/{orderId} {
+      // Clients can create orders
+      allow create: if true;
+      // Reading orders list, details or deleting is restricted to Admin
+      allow read, update, delete: if isAdmin();
+    }
+  }
+}

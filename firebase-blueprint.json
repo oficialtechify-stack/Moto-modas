@@ -1,0 +1,143 @@
+{
+  "entities": {
+    "Product": {
+      "title": "Product",
+      "description": "Item de moda masculina no catálogo da MotoModas",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "ID único do produto"
+        },
+        "name": {
+          "type": "string",
+          "description": "Nome do item de vestuário"
+        },
+        "description": {
+          "type": "string",
+          "description": "Descrição detalhada do tamanho, tecido ou caimento"
+        },
+        "price": {
+          "type": "number",
+          "description": "Preço em Reais (R$)"
+        },
+        "stock": {
+          "type": "number",
+          "description": "Quantidade atual disponível no estoque físico"
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "URL da foto do produto"
+        },
+        "category": {
+          "type": "string",
+          "description": "Categoria do vestuário (Ex: Camisas, Calças, Bermudas, Acessórios)"
+        },
+        "sizes": {
+          "type": "array",
+          "description": "Tamanhos disponíveis (Ex: P, M, G, GG, 38, 40)"
+        },
+        "colors": {
+          "type": "array",
+          "description": "Cores do item (Ex: Preto, Azul, Vermelho)"
+        },
+        "isNew": {
+          "type": "boolean",
+          "description": "Se o item é novidade ou acabou de chegar"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Data de cadastro do produto"
+        }
+      },
+      "required": ["id", "name", "price", "stock", "category"]
+    },
+    "Promotion": {
+      "title": "Promotion",
+      "description": "Campanha promocional sazonal para atrair clientes",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "ID da promoção"
+        },
+        "title": {
+          "type": "string",
+          "description": "Título principal do banner"
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Texto complementar ou condições"
+        },
+        "discount": {
+          "type": "string",
+          "description": "Mensagem de desconto (Ex: 20% OFF, Compre 1 Leve 2)"
+        },
+        "bannerUrl": {
+          "type": "string",
+          "description": "URL da imagem de fundo ou ilustrativa"
+        },
+        "isActive": {
+          "type": "boolean",
+          "description": "Status atual da promoção"
+        },
+        "categoryFilter": {
+          "type": "string",
+          "description": "Categoria alvo opcional da promoção"
+        }
+      },
+      "required": ["id", "title", "discount", "isActive"]
+    },
+    "Order": {
+      "title": "Order",
+      "description": "Pedido efetuado para envio via WhatsApp e controle de estoque",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Código identificador do pedido"
+        },
+        "customerName": {
+          "type": "string",
+          "description": "Nome informado pelo cliente"
+        },
+        "customerPhone": {
+          "type": "string",
+          "description": "Telefone de contato"
+        },
+        "items": {
+          "type": "array",
+          "description": "Lista de itens contendo id, name, size, color, quantity e price"
+        },
+        "total": {
+          "type": "number",
+          "description": "Valor total consolidado"
+        },
+        "status": {
+          "type": "string",
+          "description": "Status de controle (Ex: finalizado, cancelado, pendente)"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Registro de data e hora"
+        }
+      },
+      "required": ["id", "customerName", "items", "total", "status"]
+    }
+  },
+  "firestore": {
+    "/products/{productId}": {
+      "schema": "Product",
+      "description": "Coleção de itens de vestuário masculino da MotoModas"
+    },
+    "/promotions/{promotionId}": {
+      "schema": "Promotion",
+      "description": "Históricos ou campanhas promocionais ativas"
+    },
+    "/orders/{orderId}": {
+      "schema": "Order",
+      "description": "Pedidos consolidando fechamento de venda"
+    }
+  }
+}

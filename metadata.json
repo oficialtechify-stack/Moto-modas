@@ -1,0 +1,6 @@
+{
+  "name": "Moto Modas",
+  "description": "Catálogo de Moto Modas com pedidos via WhatsApp, controle de estoque em tempo real, mapa interativo e painel administrativo.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
