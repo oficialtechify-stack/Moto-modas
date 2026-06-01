@@ -61,8 +61,8 @@ export default function InteractiveWaveShader({ className, opacity = 1.0 }: Inte
           uv.y += 0.5 / i * cos(i * 1.3 * uv.x + iTime * 0.8);
         }
         
-        // High-contrast neon brand color of the site (#e6ff00 is vec3(0.902, 1.0, 0.0))
-        vec3 neonLime = vec3(0.902, 1.0, 0.0);
+        // High-contrast monochromatic brand color of the site (white vec3(1.0, 1.0, 1.0))
+        vec3 neonLime = vec3(1.0, 1.0, 1.0);
         
         // Calculate wave intensity with subtle neon styling
         float waveIntensity = 1.0 / (abs(sin(iTime * 0.7 - uv.y - uv.x)) + 0.15);

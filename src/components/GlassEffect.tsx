@@ -41,18 +41,18 @@ export const GlassEffect: React.FC<GlassEffectProps> = ({
     btnClasses += "opacity-45 cursor-not-allowed pointer-events-none ";
   }
 
-  // Streetwear colour variants inspired by Bomb Street Art
+  // Streetwear colour variants inspired by Monochrome Luxury Aesthetics
   if (variant === 'amber') {
-    // Vibrant Neon Lime-Yellow block with tactile 3D offset black shadow
-    btnClasses += "bg-[#e6ff00] text-black border-2 border-black hover:bg-black hover:text-[#e6ff00] hover:border-[#e6ff00] shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-[2px] active:translate-y-[2px]";
+    // Elegant Solid White brand button
+    btnClasses += "bg-white text-black border-2 border-white hover:bg-black hover:text-white hover:border-zinc-800 shadow-[3px_3px_0px_0px_rgba(255,255,255,0.15)] active:shadow-none active:translate-x-[2px] active:translate-y-[2px]";
   } else if (variant === 'dark') {
-    // Urban dark block with a subtle white border and 3D shadow
-    btnClasses += "bg-zinc-950 text-white border-2 border-zinc-800 hover:border-[#e6ff00] hover:text-[#e6ff00] shadow-[3px_3px_0px_0px_rgba(0,0,0,0.5)] active:shadow-none active:translate-x-[2px] active:translate-y-[2px]";
+    // Urban dark block with clean white/gray borders and hover highlight
+    btnClasses += "bg-zinc-950 text-zinc-300 border-2 border-zinc-800 hover:border-white hover:text-white shadow-[3px_3px_0px_0px_rgba(0,0,0,0.5)] active:shadow-none active:translate-x-[2px] active:translate-y-[2px]";
   } else if (variant === 'emerald') {
-    // Green Street neon active button
-    btnClasses += "bg-[#00ff7f] text-black border-2 border-black hover:bg-black hover:text-[#00ff7f] hover:border-[#00ff7f] shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-[2px] active:translate-y-[2px]";
+    // Elegant grayscale accent button
+    btnClasses += "bg-zinc-100 text-black border-2 border-zinc-100 hover:bg-black hover:text-white hover:border-zinc-800 shadow-[3px_3px_0px_0px_rgba(255,255,255,0.15)] active:shadow-none active:translate-x-[2px] active:translate-y-[2px]";
   } else if (variant === 'crimson') {
-    // Hot streetwear red active button
+    // Urban hot streetwear red active button
     btnClasses += "bg-[#ff2d55] text-white border-2 border-black hover:bg-black hover:text-[#ff2d55] hover:border-[#ff2d55] shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-[2px] active:translate-y-[2px]";
   }
 

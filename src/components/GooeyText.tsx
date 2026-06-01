@@ -167,7 +167,7 @@ export const MorphingLogoText: React.FC<MorphingTextProps> = ({ texts, className
         />
         <span
           ref={text2Ref}
-          className="absolute left-0 inline-block w-full uppercase text-[#e6ff00] font-sans font-black italic tracking-widest"
+          className="absolute left-0 inline-block w-full uppercase text-white font-sans font-black italic tracking-widest"
         />
       </div>
     </div>

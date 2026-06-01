@@ -36,12 +36,12 @@ export default function Header({
         
         {/* Brand Logo - Styled exactly like the second photo with live morphing effect */}
         <div className="flex items-center gap-3 cursor-pointer select-none" onClick={() => setCurrentTab('catalog')}>
-          <div className="bg-[#e6ff00] text-black w-9 h-9 flex items-center justify-center font-black text-xl rounded-none border border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+          <div className="bg-white text-black w-9 h-9 flex items-center justify-center font-black text-xl rounded-none border border-zinc-200 shadow-[2px_2px_0px_0px_rgba(255,255,255,0.15)]">
             M
           </div>
           <div className="flex flex-col justify-center min-h-[36px]">
             <MorphingLogoText 
-              texts={['MOTA MODAS', 'MOTA CASUAL', 'MOTA SOCIAL', 'MOTA STREET', 'MOTA MODAS']} 
+              texts={['MOTA MODAS', 'MOTA ESTILO', 'MOTA CASUAL', 'MOTA STREET', 'MOTA MODAS']} 
               className="w-44"
             />
           </div>
@@ -53,28 +53,28 @@ export default function Header({
           <nav className="flex items-center gap-5 text-xs font-black uppercase tracking-widest text-zinc-300">
             <button
               onClick={() => setCurrentTab('catalog')}
-              className={`hover:text-[#e6ff00] transition-colors cursor-pointer ${currentTab === 'catalog' ? 'text-[#e6ff00]' : ''}`}
+              className={`hover:text-white pb-0.5 transition-all cursor-pointer ${currentTab === 'catalog' ? 'text-white border-b-2 border-white' : ''}`}
             >
               COLEÇÃO
             </button>
             
             <button
               onClick={() => setCurrentTab('map')}
-              className={`hover:text-[#e6ff00] transition-colors cursor-pointer ${currentTab === 'map' ? 'text-[#e6ff00]' : ''}`}
+              className={`hover:text-white pb-0.5 transition-all cursor-pointer ${currentTab === 'map' ? 'text-white border-b-2 border-white' : ''}`}
             >
               ONDE ESTAMOS
             </button>
 
             <button
               onClick={() => setCurrentTab('admin')}
-              className={`hover:text-[#e6ff00] transition-colors cursor-pointer ${currentTab === 'admin' ? 'text-[#e6ff00]' : ''}`}
+              className={`hover:text-white pb-0.5 transition-all cursor-pointer ${currentTab === 'admin' ? 'text-white border-b-2 border-white' : ''}`}
             >
               PAINEL
             </button>
 
             <button
               onClick={scrollToFooter}
-              className="hover:text-[#e6ff00] transition-colors cursor-pointer"
+              className="hover:text-white transition-colors cursor-pointer"
             >
               SOBRE NÓS
             </button>
@@ -83,7 +83,7 @@ export default function Header({
               href="https://www.instagram.com/jm_mmota/" 
               target="_blank" 
               rel="noreferrer" 
-              className="text-zinc-300 hover:text-[#e6ff00] transition-colors"
+              className="text-zinc-305 hover:text-white transition-colors"
             >
               <Instagram className="w-4 h-4" />
             </a>
@@ -94,21 +94,21 @@ export default function Header({
             {/* Dynamic Cart Button - Fits the second photo style */}
             <button
               onClick={onCartOpen}
-              className="relative px-3.5 py-1.5 bg-black border border-zinc-800 hover:border-[#e6ff00] hover:text-[#e6ff00] text-white rounded-none text-[11px] font-black uppercase tracking-widest flex items-center gap-2 cursor-pointer transition-all"
+              className="relative px-3.5 py-1.5 bg-black border border-zinc-800 hover:border-white hover:text-white text-white rounded-none text-[11px] font-black uppercase tracking-widest flex items-center gap-2 cursor-pointer transition-all"
             >
               <ShoppingCart className="w-3.5 h-3.5" />
               <span>CARRINHO</span>
               {cartCount > 0 && (
-                <span className="bg-[#e6ff00] text-black text-[9px] font-black h-4 px-1 flex items-center justify-center border border-black font-mono">
+                <span className="bg-white text-black text-[9px] font-black h-4 px-1 flex items-center justify-center border border-zinc-200 font-mono">
                   {cartCount}
                 </span>
               )}
             </button>
 
-            {/* Neon Yellow CONTATO button - Matched exactly to the second photo */}
+            {/* Solid White CONTATO button */}
             <button
               onClick={handleContactClick}
-              className="bg-[#e6ff00] hover:bg-white text-black font-black uppercase text-[11px] tracking-widest py-2 px-4 border border-black flex items-center gap-1.5 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:shadow-none translate-x-0 hover:translate-x-[2px] hover:translate-y-[2px] transition-all cursor-pointer rounded-none"
+              className="bg-white hover:bg-zinc-900 text-black hover:text-white hover:border-zinc-800 font-black uppercase text-[11px] tracking-widest py-2 px-4 border border-zinc-200 flex items-center gap-1.5 shadow-[2px_2px_0px_0px_rgba(255,255,255,0.15)] hover:shadow-none translate-x-0 hover:translate-x-[2px] hover:translate-y-[2px] transition-all cursor-pointer rounded-none"
             >
               <Send className="w-3.5 h-3.5" />
               <span>CONTATO</span>

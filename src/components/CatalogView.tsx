@@ -95,10 +95,10 @@ export default function CatalogView({ products, promotions, onAddToCart }: Catal
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.1 }}
-            className="w-full max-w-4xl bg-black border-2 border-zinc-900 rounded-none shadow-[6px_6px_0px_0px_rgba(230,255,0,0.85)] flex flex-col items-center justify-center p-8 sm:p-14 mb-10 relative overflow-hidden group select-none"
+            className="w-full max-w-4xl bg-black border-2 border-zinc-900 rounded-none shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] flex flex-col items-center justify-center p-8 sm:p-14 mb-10 relative overflow-hidden group select-none"
           >
             {/* Subtle flow background layer inside the brand card */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-zinc-950 via-zinc-950 to-[#e6ff00]/5 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-zinc-950 via-zinc-950 to-white/5 pointer-events-none" />
             
             {/* Elegant SVG Double-Line Monogram 'M' */}
             <div className="relative z-10 flex flex-col items-center text-center">
@@ -159,39 +159,6 @@ export default function CatalogView({ products, promotions, onAddToCart }: Catal
             </div>
           </motion.div>
 
-          {/* Neon Yellow Badge */}
-          <motion.div 
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="inline-block bg-[#e6ff00] text-black text-[10px] sm:text-xs font-black uppercase tracking-widest px-3 py-1 mb-6 rounded-none font-mono border border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
-          >
-            COLEÇÃO 2024 / RECIFE, PE
-          </motion.div>
-
-          {/* High Impact Display Title */}
-          <motion.h2 
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3 }}
-            className="text-4.5xl sm:text-6xl md:text-7xl lg:text-8xl font-sans italic font-black uppercase leading-[0.85] text-white tracking-wider text-center select-none mb-4 flex flex-col items-center"
-          >
-            <span className="block drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">MARCAS</span>
-            <span className="block mt-1 drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)] text-[#e6ff00]">
-              FAMOSAS
-            </span>
-          </motion.h2>
-
-          {/* Subtitle describing styles */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="text-xs sm:text-sm font-mono tracking-widest text-center text-zinc-300 max-w-xl px-4 uppercase mb-12 font-bold leading-relaxed"
-          >
-            Venda de roupas das principais marcas famosas do mercado. Encontre os estilos imperativos: <span className="text-[#e6ff00]">CASUAL</span> • <span className="text-[#e6ff00]">SOCIAL</span> • <span className="text-[#e6ff00]">STREET</span> com a máxima exclusividade.
-          </motion.p>
-
           {/* Hero Buttons block */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md px-4">
             <button
@@ -199,7 +166,7 @@ export default function CatalogView({ products, promotions, onAddToCart }: Catal
                 const el = document.getElementById('catalog-anchor');
                 if (el) el.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="w-full sm:w-auto bg-[#e6ff00] hover:bg-white text-black font-black uppercase text-xs sm:text-sm tracking-widest py-3 px-8 border-2 border-black flex items-center justify-center gap-1.5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none translate-x-0 hover:translate-x-[2px] hover:translate-y-[2px] transition-all cursor-pointer rounded-none"
+              className="w-full sm:w-auto bg-white hover:bg-zinc-200 text-black font-black uppercase text-xs sm:text-sm tracking-widest py-3 px-8 flex items-center justify-center gap-1.5 shadow-[4px_4px_0px_0px_rgba(255,255,255,0.25)] hover:shadow-none translate-x-0 hover:translate-x-[2px] hover:translate-y-[2px] transition-all cursor-pointer rounded-none"
             >
               VER COLEÇÃO →
             </button>
@@ -208,7 +175,7 @@ export default function CatalogView({ products, promotions, onAddToCart }: Catal
                 const el = document.getElementById('catalog-anchor');
                 if (el) el.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="w-full sm:w-auto bg-transparent hover:bg-white text-white hover:text-black font-black uppercase text-xs sm:text-sm tracking-widest py-3 px-8 border-2 border-white hover:border-black transition-all cursor-pointer rounded-none"
+              className="w-full sm:w-auto bg-transparent hover:bg-zinc-900 border-2 border-zinc-700 hover:border-white text-zinc-300 hover:text-white font-black uppercase text-xs sm:text-sm tracking-widest py-3 px-8 transition-all cursor-pointer rounded-none"
             >
               CATÁLOGO
             </button>
@@ -221,17 +188,17 @@ export default function CatalogView({ products, promotions, onAddToCart }: Catal
       <div id="catalog-anchor" className="scroll-mt-6" />
 
       {/* INFINITE STREETWEAR MARQUEE TICKER TAPE */}
-      <div className="w-full bg-[#e6ff00] py-2 border-y-2 border-black overflow-hidden select-none flex items-center my-6 shadow-[3px_3px_0px_0px_rgba(0,0,0,0.4)]">
-        <div className="flex animate-marquee whitespace-nowrap gap-12 text-xs font-black italic text-black uppercase tracking-widest">
+      <div className="w-full bg-zinc-950 border-y border-zinc-900 py-3.5 overflow-hidden select-none flex items-center my-6">
+        <div className="flex animate-marquee whitespace-nowrap gap-12 text-xs font-black italic text-zinc-400 uppercase tracking-widest">
           {/* We repeat the pattern enough to span multiple screen widths */}
           <div className="flex shrink-0 items-center gap-12 uppercase font-black font-mono">
-            <span>RECIFE</span> <span>✨</span> <span>MOTA ESTILO</span> <span>✦</span> <span>ORIGINAL</span> <span>✨</span> <span>URBAN CULTURE</span> <span>✦</span> <span>STREETWEAR</span> <span>✨</span> <span>MOTA MODAS</span> <span>✦</span>
+            <span>RECIFE</span> <span>✦</span> <span>MOTA ESTILO</span> <span>✦</span> <span>ORIGINAL</span> <span>✦</span> <span>URBAN CULTURE</span> <span>✦</span> <span>STREETWEAR</span> <span>✦</span> <span>MOTA MODAS</span> <span>✦</span>
           </div>
           <div className="flex shrink-0 items-center gap-12 uppercase font-black font-mono">
-            <span>RECIFE</span> <span>✨</span> <span>MOTA ESTILO</span> <span>✦</span> <span>ORIGINAL</span> <span>✨</span> <span>URBAN CULTURE</span> <span>✦</span> <span>STREETWEAR</span> <span>✨</span> <span>MOTA MODAS</span> <span>✦</span>
+            <span>RECIFE</span> <span>✦</span> <span>MOTA ESTILO</span> <span>✦</span> <span>ORIGINAL</span> <span>✦</span> <span>URBAN CULTURE</span> <span>✦</span> <span>STREETWEAR</span> <span>✦</span> <span>MOTA MODAS</span> <span>✦</span>
           </div>
           <div className="flex shrink-0 items-center gap-12 uppercase font-black font-mono">
-            <span>RECIFE</span> <span>✨</span> <span>MOTA ESTILO</span> <span>✦</span> <span>ORIGINAL</span> <span>✨</span> <span>URBAN CULTURE</span> <span>✦</span> <span>STREETWEAR</span> <span>✨</span> <span>MOTA MODAS</span> <span>✦</span>
+            <span>RECIFE</span> <span>✦</span> <span>MOTA ESTILO</span> <span>✦</span> <span>ORIGINAL</span> <span>✦</span> <span>URBAN CULTURE</span> <span>✦</span> <span>STREETWEAR</span> <span>✦</span> <span>MOTA MODAS</span> <span>✦</span>
           </div>
         </div>
       </div>
@@ -249,7 +216,7 @@ export default function CatalogView({ products, promotions, onAddToCart }: Catal
               placeholder="Buscar polo, calça jeans, camiseta..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-11 pr-4 py-2.5 rounded-none bg-zinc-950 border-2 border-zinc-800 focus:border-[#e6ff00] text-white placeholder-zinc-500 text-sm focus:outline-none transition-all outline-none"
+              className="w-full pl-11 pr-4 py-2.5 rounded-none bg-zinc-950 border-2 border-zinc-800 focus:border-white text-white placeholder-zinc-500 text-sm focus:outline-none transition-all outline-none"
             />
           </div>
 
@@ -314,12 +281,12 @@ export default function CatalogView({ products, promotions, onAddToCart }: Catal
                     transition={{ duration: 0.2, delay: Math.min(index * 0.05, 0.4) }}
                     onClick={() => !isOutOfStock && handleOpenDetail(p)}
                     className={`bg-zinc-950 border-2 border-zinc-800 text-white rounded-none p-3 sm:p-4 flex flex-col group relative transition-all duration-300 select-none ${
-                      isOutOfStock ? 'opacity-50' : 'hover:border-[#e6ff00] cursor-pointer shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[5px_5px_0px_0px_rgba(230,255,0,0.85)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none'
+                      isOutOfStock ? 'opacity-50' : 'hover:border-white cursor-pointer shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[5px_5px_0px_0px_rgba(255,255,255,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none'
                     }`}
                   >
                     {/* New Badge */}
                     {p.isNew && !isOutOfStock && (
-                      <span className="absolute top-4 left-4 z-10 bg-[#e6ff00] text-black text-[9px] font-black uppercase tracking-wider px-2 py-0.5 rounded-none border border-black shadow-md flex items-center gap-1">
+                      <span className="absolute top-4 left-4 z-10 bg-white text-black text-[9px] font-black uppercase tracking-wider px-2 py-0.5 rounded-none border border-zinc-300 shadow-md flex items-center gap-1">
                         <Sparkles className="w-2.5 h-2.5 shrink-0" />
                         NOVIDADE
                       </span>
@@ -351,7 +318,7 @@ export default function CatalogView({ products, promotions, onAddToCart }: Catal
                         </span>
                         
                         {/* Title */}
-                        <h4 className="font-extrabold text-sm sm:text-base text-zinc-100 group-hover:text-[#e6ff00] transition-colors mt-0.5 line-clamp-1">
+                        <h4 className="font-extrabold text-sm sm:text-base text-zinc-100 group-hover:text-white transition-colors mt-0.5 line-clamp-1">
                           {p.name}
                         </h4>
 
@@ -369,8 +336,8 @@ export default function CatalogView({ products, promotions, onAddToCart }: Catal
                               <AlertTriangle className="w-3 h-3" /> Estoque esgotado
                             </span>
                           ) : isLowStock ? (
-                            <span className="text-[#e6ff00] flex items-center gap-1">
-                              <AlertTriangle className="w-3 h-3" /> Apenas {p.stock} restantes!
+                            <span className="text-zinc-300 flex items-center gap-1">
+                              <AlertTriangle className="w-3 h-3 text-zinc-400" /> Apenas {p.stock} restantes!
                             </span>
                           ) : (
                             <span className="text-emerald-500 flex items-center gap-1">
@@ -430,7 +397,7 @@ export default function CatalogView({ products, promotions, onAddToCart }: Catal
             >
               <button
                 onClick={() => setSelectedProduct(null)}
-                className="absolute top-4 right-4 z-20 bg-zinc-900 border-2 border-black text-white hover:bg-[#e6ff00] hover:text-black p-2 rounded-none cursor-pointer hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] transition-all outline-none"
+                className="absolute top-4 right-4 z-20 bg-zinc-900 border-2 border-black text-white hover:bg-white hover:text-black p-2 rounded-none cursor-pointer hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] transition-all outline-none"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -446,7 +413,7 @@ export default function CatalogView({ products, promotions, onAddToCart }: Catal
                 
                 {/* Visual Novelty tag */}
                 {selectedProduct.isNew && (
-                  <span className="absolute top-4 left-4 z-10 bg-[#e6ff00] text-black text-[9px] font-black uppercase px-2.5 py-1 rounded-full shadow-md">
+                  <span className="absolute top-4 left-4 z-10 bg-white text-black text-[9px] font-black uppercase px-2.5 py-1 rounded-none border border-zinc-300 shadow-md">
                     Novidade
                   </span>
                 )}
@@ -456,13 +423,13 @@ export default function CatalogView({ products, promotions, onAddToCart }: Catal
               <div className="w-full md:w-1/2 p-6 flex flex-col justify-between h-[450px] overflow-y-auto">
                 <div className="space-y-4">
                   <div>
-                    <span className="text-[10px] font-semibold text-[#e6ff00] font-mono tracking-widest uppercase">
+                    <span className="text-[10px] font-semibold text-zinc-400 font-mono tracking-widest uppercase">
                       {selectedProduct.category}
                     </span>
                     <h3 className="text-xl font-extrabold text-white mt-1 leading-tight">
                       {selectedProduct.name}
                     </h3>
-                    <p className="text-2xl font-black text-[#e6ff00] mt-2">
+                    <p className="text-2xl font-black text-white mt-2">
                       R$ {selectedProduct.price.toFixed(2).replace('.', ',')}
                     </p>
                   </div>

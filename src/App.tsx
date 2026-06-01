@@ -262,9 +262,9 @@ export default function App() {
             initial={{ opacity: 0, y: 50, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 50, scale: 0.9 }}
-            className="fixed bottom-6 left-1/2 -translate-x-1/2 z-55 bg-zinc-950 border-2 border-[#e6ff00] text-white px-5 py-3 rounded-none shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] flex items-center gap-2.5 text-xs font-black uppercase tracking-wider"
+            className="fixed bottom-6 left-1/2 -translate-x-1/2 z-55 bg-zinc-950 border-2 border-white text-white px-5 py-3 rounded-none shadow-[3px_3px_0px_0px_rgba(255,255,255,0.15)] flex items-center gap-2.5 text-xs font-black uppercase tracking-wider"
           >
-            <CheckCircle2 className="w-4.5 h-4.5 text-[#e6ff00]" />
+            <CheckCircle2 className="w-4.5 h-4.5 text-white" />
             <span>{toastMessage}</span>
           </motion.div>
         )}
@@ -324,7 +324,7 @@ export default function App() {
           {/* LOJA INFO */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="bg-[#e6ff00] text-black font-black px-2 py-0.5 text-sm uppercase tracking-wider border border-black shadow-[1.5px_1.5px_0px_0px_rgba(0,0,0,1)]">
+              <div className="bg-white text-black font-black px-2 py-0.5 text-sm uppercase tracking-wider border border-zinc-200 shadow-[1.5px_1.5px_0px_0px_rgba(255,255,255,0.15)]">
                 JM
               </div>
               <h4 className="font-extrabold text-sm text-zinc-200 tracking-wider">MOTA MODAS</h4>
@@ -336,7 +336,7 @@ export default function App() {
 
             <div className="space-y-2 mt-4 text-[11px] text-zinc-400 font-mono">
               <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-[#e6ff00] shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-white shrink-0 mt-0.5" />
                 <span>
                   Avenida Antonio Jacome Bezerra, N: 9 C<br />
                   Jaboatão dos Guararapes - PE<br />
@@ -350,7 +350,7 @@ export default function App() {
                 href="https://api.whatsapp.com/send?l=pt-BR&phone=5581985555951&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20roupas%20da%20JM%2520Mota%2520Modas."
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 bg-[#e6ff00] hover:bg-white text-black font-black uppercase text-[10px] tracking-widest py-2 px-3 border border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-none transition-all rounded-none"
+                className="inline-flex items-center gap-2 bg-white hover:bg-zinc-900 text-black hover:text-white font-black uppercase text-[10px] tracking-widest py-2 px-3 border border-zinc-200 shadow-[2px_2px_0px_0px_rgba(255,255,255,0.15)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-none transition-all rounded-none"
               >
                 <span>Fale no WhatsApp</span>
                 <span className="font-mono text-[9px] bg-black text-white px-1 py-0.2 rounded-none">81 98555-5951</span>
@@ -360,7 +360,7 @@ export default function App() {
 
           {/* SOCIALS & CONNECTION */}
           <div className="space-y-4">
-            <h4 className="font-extrabold text-xs text-white uppercase tracking-widest border-l-2 border-[#e6ff00] pl-2 font-mono">
+            <h4 className="font-extrabold text-xs text-white uppercase tracking-widest border-l-2 border-white pl-2 font-mono">
               Instas Oficiais
             </h4>
             
@@ -369,13 +369,13 @@ export default function App() {
                 href="https://www.instagram.com/jm_mmota/" 
                 target="_blank" 
                 rel="noreferrer"
-                className="flex items-center justify-between p-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-[#e6ff00] text-zinc-300 hover:text-white transition-all group"
+                className="flex items-center justify-between p-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-white text-zinc-300 hover:text-white transition-all group"
               >
                 <div className="flex items-center gap-2">
-                  <Instagram className="w-4 h-4 text-[#e6ff00]" />
+                  <Instagram className="w-4 h-4 text-white" />
                   <span className="font-mono text-xs font-bold">@jm_mmota</span>
                 </div>
-                <div className="flex items-center gap-1.5 text-[9px] font-black uppercase tracking-wider text-zinc-500 group-hover:text-[#e6ff00] transition-colors">
+                <div className="flex items-center gap-1.5 text-[9px] font-black uppercase tracking-wider text-zinc-500 group-hover:text-white transition-colors">
                   <span>Siga a Loja</span>
                   <ExternalLink className="w-3 h-3" />
                 </div>
@@ -385,13 +385,13 @@ export default function App() {
                 href="https://www.instagram.com/rickzinx_/" 
                 target="_blank" 
                 rel="noreferrer"
-                className="flex items-center justify-between p-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-[#e6ff00] text-zinc-300 hover:text-white transition-all group"
+                className="flex items-center justify-between p-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-white text-zinc-300 hover:text-white transition-all group"
               >
                 <div className="flex items-center gap-2">
-                  <Instagram className="w-4 h-4 text-[#e6ff00]" />
+                  <Instagram className="w-4 h-4 text-white" />
                   <span className="font-mono text-xs">@rickzinx_</span>
                 </div>
-                <div className="flex items-center gap-1.5 text-[9px] font-black uppercase tracking-wider text-zinc-500 group-hover:text-[#e6ff00] transition-colors">
+                <div className="flex items-center gap-1.5 text-[9px] font-black uppercase tracking-wider text-zinc-500 group-hover:text-white transition-colors">
                   <span>Criador do Site</span>
                   <ExternalLink className="w-3 h-3" />
                 </div>
@@ -399,13 +399,13 @@ export default function App() {
             </div>
 
             <div className="pt-2 flex items-center gap-3 text-zinc-400 font-bold text-[11px] font-mono">
-              <span className="flex items-center gap-1"><ShieldCheck className="w-3.5 h-3.5 text-[#e6ff00]" /> Garantia JM Mota Modas</span>
+              <span className="flex items-center gap-1"><ShieldCheck className="w-3.5 h-3.5 text-white" /> Garantia JM Mota Modas</span>
             </div>
           </div>
 
           {/* DESENVOLVIDO POR */}
           <div className="space-y-4">
-            <h4 className="font-extrabold text-xs text-white uppercase tracking-widest border-l-2 border-[#e6ff00] pl-2 font-mono">
+            <h4 className="font-extrabold text-xs text-white uppercase tracking-widest border-l-2 border-white pl-2 font-mono">
               Desenvolvimento
             </h4>
             
@@ -418,9 +418,9 @@ export default function App() {
                 href="https://www.instagram.com/ecos__agency/" 
                 target="_blank" 
                 rel="noreferrer"
-                className="flex flex-col p-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-[#e6ff00] text-zinc-300 hover:text-white transition-all group"
+                className="flex flex-col p-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-white text-zinc-300 hover:text-white transition-all group"
               >
-                <span className="text-[10px] font-bold text-zinc-400 group-hover:text-[#e6ff00] transition-colors uppercase font-mono">Ecos Agency</span>
+                <span className="text-[10px] font-bold text-zinc-400 group-hover:text-white transition-colors uppercase font-mono">Ecos Agency</span>
                 <span className="text-[9px] text-zinc-500 mt-0.5 flex items-center gap-1">@ecos__agency <ExternalLink className="w-2.5 h-2.5" /></span>
               </a>
 
@@ -428,9 +428,9 @@ export default function App() {
                 href="https://www.instagram.com/techify.oficial/" 
                 target="_blank" 
                 rel="noreferrer"
-                className="flex flex-col p-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-[#e6ff00] text-zinc-300 hover:text-white transition-all group"
+                className="flex flex-col p-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-white text-zinc-300 hover:text-white transition-all group"
               >
-                <span className="text-[10px] font-bold text-zinc-400 group-hover:text-[#e6ff00] transition-colors uppercase font-mono">Techify</span>
+                <span className="text-[10px] font-bold text-zinc-400 group-hover:text-white transition-colors uppercase font-mono">Techify</span>
                 <span className="text-[9px] text-zinc-500 mt-0.5 flex items-center gap-1">@techify.oficial <ExternalLink className="w-2.5 h-2.5" /></span>
               </a>
             </div>
@@ -445,7 +445,7 @@ export default function App() {
           </p>
           <p className="text-[9px] font-mono uppercase tracking-wider text-zinc-500 flex items-center justify-center sm:justify-start gap-1 flex-wrap">
             <span>PROJETADO POR</span>
-            <a href="https://www.instagram.com/rickzinx_/" target="_blank" rel="noreferrer" className="text-[#e6ff00] hover:underline font-bold">@rickzinx_</a>
+            <a href="https://www.instagram.com/rickzinx_/" target="_blank" rel="noreferrer" className="text-white hover:underline font-bold">@rickzinx_</a>
             <span>• PARCERIA</span>
             <span className="text-zinc-400">ECOS & TECHIFY</span>
           </p>

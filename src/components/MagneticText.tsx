@@ -19,7 +19,7 @@ export function MagneticText({
   textClassName,
   hoverTextClassName,
   circleSize = 180,
-  circleBg = "bg-[#e6ff00]"
+  circleBg = "bg-white"
 }: MagneticTextProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const circleRef = useRef<HTMLDivElement>(null);

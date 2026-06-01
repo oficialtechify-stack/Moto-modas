@@ -227,7 +227,7 @@ export default function AdminPanel({
           animate={{ opacity: 1, scale: 1 }}
           className="bg-zinc-900 border-2 border-black p-6 sm:p-8 rounded-none w-full max-w-sm text-center text-white space-y-6 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]"
         >
-          <div className="w-14 h-14 bg-[#e6ff00]/10 border-2 border-black text-[#e6ff00] rounded-none flex items-center justify-center mx-auto shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+          <div className="w-14 h-14 bg-white/10 border-2 border-zinc-800 text-white rounded-none flex items-center justify-center mx-auto shadow-[2px_2px_0px_0px_rgba(255,255,255,0.15)]">
             <KeyRound className="w-7 h-7" />
           </div>
 
@@ -283,7 +283,7 @@ export default function AdminPanel({
                   setPassError(false);
                 }}
                 className={`w-full bg-zinc-950 border-2 text-center px-4 py-3 rounded-none text-xs font-semibold tracking-wider text-white focus:outline-none transition-all ${
-                  passError ? 'border-red-500 focus:border-red-500' : 'border-zinc-800 focus:border-[#e6ff00]'
+                  passError ? 'border-red-500 focus:border-red-500' : 'border-zinc-800 focus:border-white'
                 }`}
               />
             </div>

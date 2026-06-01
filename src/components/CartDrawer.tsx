@@ -159,12 +159,12 @@ export default function CartDrawer({
               {/* Drawer Header */}
               <div className="px-6 py-5 border-b border-zinc-800 flex items-center justify-between">
                 <h3 className="text-base font-black tracking-wider uppercase text-zinc-100 flex items-center gap-2">
-                  <ShoppingBag className="w-5 h-5 text-amber-500" />
+                  <ShoppingBag className="w-5 h-5 text-white" />
                   SEU CARRINHO
                 </h3>
                 <button
                   onClick={onClose}
-                  className="text-white hover:text-[#e6ff00] p-2 rounded-none bg-zinc-905 border-2 border-black hover:bg-black hover:border-[#e6ff00] cursor-pointer shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-none transition-all"
+                  className="text-white hover:text-white p-2 rounded-none bg-zinc-900 border-2 border-zinc-800 hover:bg-zinc-800 hover:border-zinc-300 cursor-pointer shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-none transition-all"
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -176,7 +176,7 @@ export default function CartDrawer({
                   <motion.div
                     initial={{ scale: 0.5, rotate: -45 }}
                     animate={{ scale: 1.1, rotate: 0 }}
-                    className="w-16 h-16 rounded-none bg-[#e6ff00] text-black border-2 border-black flex items-center justify-center shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]"
+                    className="w-16 h-16 rounded-none bg-white text-black border-2 border-black flex items-center justify-center shadow-[3px_3px_0px_0px_rgba(255,255,255,1)]"
                   >
                     <CheckCircle className="w-8 h-8" />
                   </motion.div>
@@ -184,7 +184,7 @@ export default function CartDrawer({
                   <p className="text-xs text-zinc-400 max-w-xs leading-relaxed">
                     Estamos atualizando nosso estoque em tempo real e abrindo o WhatsApp do lojista para que você conclua o pagamento.
                   </p>
-                  <p className="text-[10px] text-amber-400 font-mono tracking-widest animate-pulse">
+                  <p className="text-[10px] text-zinc-300 font-mono tracking-widest animate-pulse">
                     DIRECIONANDO VOCÊ EM 1 SEGUNDO...
                   </p>
                 </div>
@@ -287,7 +287,7 @@ export default function CartDrawer({
                           placeholder="Seu Nome Completo (Obrigatório)"
                           value={customerName}
                           onChange={(e) => setCustomerName(e.target.value)}
-                          className="w-full bg-zinc-950 border-2 border-zinc-800 focus:border-[#e6ff00] px-4 py-2.5 rounded-none text-xs text-white focus:outline-none transition-all outline-none font-black uppercase tracking-wider"
+                          className="w-full bg-zinc-950 border-2 border-zinc-800 focus:border-white px-4 py-2.5 rounded-none text-xs text-white focus:outline-none transition-all outline-none font-black uppercase tracking-wider"
                         />
                         <input
                           id="customer-phone"
@@ -295,7 +295,7 @@ export default function CartDrawer({
                           placeholder="Seu WhatsApp (Ex: 81 98888-7777)"
                           value={customerPhone}
                           onChange={(e) => setCustomerPhone(e.target.value)}
-                          className="w-full bg-zinc-950 border-2 border-zinc-800 focus:border-[#e6ff00] px-4 py-2.5 rounded-none text-xs text-white focus:outline-none transition-all outline-none font-black uppercase tracking-wider"
+                          className="w-full bg-zinc-950 border-2 border-zinc-800 focus:border-white px-4 py-2.5 rounded-none text-xs text-white focus:outline-none transition-all outline-none font-black uppercase tracking-wider"
                         />
                       </div>
                     </div>
@@ -324,8 +324,8 @@ export default function CartDrawer({
 
                       {/* Display Delivery Address alerts */}
                       {deliveryType === 'retirada' ? (
-                        <div className="bg-zinc-950/80 p-2.5 rounded-none border-2 border-black text-[10px] text-[#e6ff00] flex items-start gap-1.5 leading-relaxed shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-                          <MapPin className="w-4 h-4 shrink-0 mt-0.5 text-[#e6ff00]" />
+                        <div className="bg-zinc-950/80 p-2.5 rounded-none border border-zinc-800 text-[10px] text-zinc-300 flex items-start gap-1.5 leading-relaxed shadow-[2px_2px_0px_0px_rgba(255,255,255,0.15)]">
+                          <MapPin className="w-4 h-4 shrink-0 mt-0.5 text-white" />
                           <div>
                             <strong>Retirada física (Grátis):</strong> Avenida Antonio Jacome Bezerra, N: 9 C, Curado III, Jaboatão. Próximo ao metrô ou principais avenidas do Curado.
                           </div>
@@ -347,7 +347,7 @@ export default function CartDrawer({
                       placeholder="Observações adicionais (tamanho, cor, etc.)"
                       value={notes}
                       onChange={(e) => setNotes(e.target.value)}
-                      className="w-full bg-zinc-950 border-2 border-zinc-800 focus:border-[#e6ff00] px-4 py-2.5 rounded-none text-xs text-white focus:outline-none transition-all outline-none font-black uppercase tracking-wider"
+                      className="w-full bg-zinc-950 border-2 border-zinc-800 focus:border-white px-4 py-2.5 rounded-none text-xs text-white focus:outline-none transition-all outline-none font-black uppercase tracking-wider"
                     />
 
                     {/* Checkout Billing */}
