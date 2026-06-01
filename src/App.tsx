@@ -17,9 +17,8 @@ import CatalogView from './components/CatalogView';
 import CartDrawer from './components/CartDrawer';
 import MapView from './components/MapView';
 import AdminPanel from './components/AdminPanel';
-import ShadowOverlay from './components/ShadowOverlay';
+import InteractiveWaveShader from './components/InteractiveWaveShader';
 import { GlassFilter } from './components/GlassEffect';
-import WarpBg from './components/WarpBg';
 
 import { Product, Promotion, Order, CartItem } from './types';
 import { DataService } from './lib/dataService';
@@ -238,13 +237,10 @@ export default function App() {
 
   return (
     <div className="bg-zinc-950 min-h-screen text-zinc-100 flex flex-col font-sans selection:bg-amber-500 selection:text-black antialiased relative">
-      {/* LIQUID CHECKERED WARP BACKGROUND (BLACK & WHITE) */}
+      {/* HIGH-PERFORMANCE INTERACTIVE NEON WAVE CAUSTICS BG */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        <WarpBg />
+        <InteractiveWaveShader />
       </div>
-
-      {/* SHADOW OVERLAY AMBIENT BACKGROUND */}
-      <ShadowOverlay style={{ position: 'fixed', zIndex: 1 }} />
       
       {/* HEADER NAVBAR NAV */}
       <div className="relative z-10 w-full">

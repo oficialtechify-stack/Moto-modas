@@ -3,7 +3,7 @@ import { Search, Sparkles, AlertTriangle, CheckCircle2, ShoppingBag, Plus, Minus
 import { motion, AnimatePresence } from 'motion/react';
 import { Product, Promotion, CartItem } from '../types';
 import { GlassEffect } from './GlassEffect';
-import WarpBg from './WarpBg';
+import InteractiveWaveShader from './InteractiveWaveShader';
 
 interface CatalogViewProps {
   products: Product[];
@@ -66,9 +66,9 @@ export default function CatalogView({ products, promotions, onAddToCart }: Catal
       {/* 1. MOTO MODAS PREMIUM HERO SECTION */}
       <section className="relative w-full overflow-hidden border-2 border-black rounded-none shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] bg-zinc-950 px-4 py-12 sm:py-20 flex flex-col items-center">
         
-        {/* Liquid Checkered Warp Background in brand-matching neon yellow-lime */}
+        {/* Interactive neon-wave backdrop */}
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <WarpBg variant="neon" opacity={0.15} />
+          <InteractiveWaveShader opacity={0.4} />
         </div>
         <div 
           className="absolute inset-0 z-0 opacity-10 pointer-events-none" 
@@ -102,13 +102,23 @@ export default function CatalogView({ products, promotions, onAddToCart }: Catal
           <motion.h2 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-sans italic font-black uppercase leading-[0.85] text-white tracking-widest text-center select-none mb-12 flex flex-col items-center"
+            className="text-4.5xl sm:text-6xl md:text-7xl lg:text-8xl font-sans italic font-black uppercase leading-[0.85] text-white tracking-wider text-center select-none mb-4 flex flex-col items-center"
           >
-            <span className="block drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">DIRETAMENTE</span>
-            <span className="block mt-1 drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">
-              DAS <span className="text-[#e6ff00]">RUAS</span>
+            <span className="block drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">MARCAS</span>
+            <span className="block mt-1 drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)] text-[#e6ff00]">
+              FAMOSAS
             </span>
           </motion.h2>
+
+          {/* Subtitle describing styles */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="text-xs sm:text-sm font-mono tracking-widest text-center text-zinc-300 max-w-xl px-4 uppercase mb-12 font-bold leading-relaxed"
+          >
+            Venda de roupas das principais marcas famosas do mercado. Encontre os estilos imperativos: <span className="text-[#e6ff00]">CASUAL</span> • <span className="text-[#e6ff00]">SOCIAL</span> • <span className="text-[#e6ff00]">STREET</span> com a máxima exclusividade.
+          </motion.p>
 
           {/* 4 Tall Streetwear Model Photos in red brick background */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-5xl w-full px-2 mb-10">

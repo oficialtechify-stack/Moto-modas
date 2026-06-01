@@ -52,12 +52,12 @@ function handleFirestoreError(error: unknown, operationType: OperationType, path
 const INITIAL_PRODUCTS: Product[] = [
   {
     id: 'prod-1',
-    name: 'Polo Premium MotoModas',
-    description: 'Camisa polo em algodão piquet com caimento slim moderno, gola estruturada e detalhes discretos em alto relevo.',
-    price: 89.90,
+    name: 'Polo Lacoste Live Classic',
+    description: 'A clássica polo Lacoste em algodão piquet com corte moderno e crocodilo bordado. O melhor do vestuário casual premium.',
+    price: 389.90,
     stock: 12,
     imageUrl: 'https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&auto=format&fit=crop',
-    category: 'Polos',
+    category: 'Casual',
     sizes: ['P', 'M', 'G', 'GG'],
     colors: ['Preto Classic', 'Off-White', 'Azul Marinho'],
     isNew: true,
@@ -65,25 +65,25 @@ const INITIAL_PRODUCTS: Product[] = [
   },
   {
     id: 'prod-2',
-    name: 'Calça Slim Jeans Destroyer',
-    description: 'Calça jeans masculina com lavagem moderna de design destroy, stretch sutil para máximo conforto no dia a dia.',
-    price: 149.90,
+    name: 'Camisa Social Hugo Boss Slim',
+    description: 'Confeccionada em algodão egípcio penteado extra macio. Corte slim italiano perfeito para casamentos, reuniões e eventos sociais.',
+    price: 459.90,
     stock: 8,
-    imageUrl: 'https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&auto=format&fit=crop',
-    category: 'Calças',
-    sizes: ['38', '40', '42', '44', '46'],
-    colors: ['Azul Denim', 'Preto Estonado'],
-    isNew: false,
+    imageUrl: 'https://images.unsplash.com/photo-1596755094514-f87e34185267?w=600&auto=format&fit=crop',
+    category: 'Social',
+    sizes: ['M', 'G', 'GG'],
+    colors: ['Branco Nobre', 'Azul Claro'],
+    isNew: true,
     createdAt: new Date().toISOString()
   },
   {
     id: 'prod-3',
-    name: 'Camiseta Oversized Minimalist',
-    description: 'Modelagem streetwear oversized confeccionada com algodão de toque macio e costuras reforçadas. Conforto total.',
-    price: 69.90,
+    name: 'Camiseta Balenciaga Oversized Street',
+    description: 'Modelagem autêntica streetwear em algodão pesado premium de 240g, costuras triplicadas e estampa icônica minimalista de alta durabilidade.',
+    price: 299.90,
     stock: 18,
     imageUrl: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&auto=format&fit=crop',
-    category: 'Camisetas',
+    category: 'Street',
     sizes: ['M', 'G', 'GG'],
     colors: ['Preto Carbono', 'Cacau', 'Bege Areia'],
     isNew: true,
@@ -91,40 +91,40 @@ const INITIAL_PRODUCTS: Product[] = [
   },
   {
     id: 'prod-4',
-    name: 'Bermuda Sarja Street Confort',
-    description: 'Bermuda em sarja com fechamento por zíper e botão, bolsos faca e design casual para os fins de semana.',
-    price: 79.90,
+    name: 'Jeans Diesel Slim Destroyer',
+    description: 'Jeans Diesel importado com lavagem destroyed premium exclusiva, stretch sutil para máximo conforto e rebites reforçados.',
+    price: 549.90,
     stock: 15,
-    imageUrl: 'https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=600&auto=format&fit=crop',
-    category: 'Bermudas',
+    imageUrl: 'https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&auto=format&fit=crop',
+    category: 'Street',
     sizes: ['38', '40', '42', '44'],
-    colors: ['Kaki', 'Preto', 'Verde Militar'],
+    colors: ['Azul Vintage', 'Preto Grafite'],
     isNew: false,
     createdAt: new Date().toISOString()
   },
   {
     id: 'prod-5',
-    name: 'Corta-Vento Sport Moto',
-    description: 'Jaqueta impermeável com capuz regulável, zíper tratorado e bolso canguru interno. Ideal para quem anda sobre duas rodas.',
-    price: 189.90,
+    name: 'Blazer Armani Executive Slim',
+    description: 'Blazer de alfaiataria slim estruturado com lã fria nobre e forro interno acetinado estilizado. Requinte e sofisticação incomparáveis.',
+    price: 899.90,
     stock: 5,
-    imageUrl: 'https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=600&auto=format&fit=crop',
-    category: 'Casacos',
+    imageUrl: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop',
+    category: 'Social',
     sizes: ['M', 'G', 'GG'],
-    colors: ['Preto / Cinza', 'Vermelho / Preto'],
+    colors: ['Preto Charcoal', 'Cinza Chumbo'],
     isNew: true,
     createdAt: new Date().toISOString()
   },
   {
     id: 'prod-6',
-    name: 'Boné Trucker Logo Couro',
-    description: 'Boné modelo trucker americano com tela respirável traseira e aplique frontal de logo gravado a laser no couro.',
-    price: 49.90,
+    name: 'Jaqueta Corta-Vento Tommy Hilfiger',
+    description: 'Jaqueta corta-vento impermeável de design clássico assinada pela marca. Possui capuz oculto e fechamento por zíper duplo frontal.',
+    price: 489.90,
     stock: 22,
-    imageUrl: 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600&auto=format&fit=crop',
-    category: 'Acessórios',
-    sizes: ['Único'],
-    colors: ['Todo Preto', 'Cinza / Preto'],
+    imageUrl: 'https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=600&auto=format&fit=crop',
+    category: 'Casual',
+    sizes: ['P', 'M', 'G', 'GG'],
+    colors: ['Grena / Marinho', 'Preto Absoluto'],
     isNew: false,
     createdAt: new Date().toISOString()
   }
@@ -133,29 +133,29 @@ const INITIAL_PRODUCTS: Product[] = [
 const INITIAL_PROMOTIONS: Promotion[] = [
   {
     id: 'promo-1',
-    title: 'Inverno MotoModas',
-    subtitle: 'Jaquetas e agasalhos corta-vento premium para passeios de moto ou uso casual.',
+    title: 'Estilo Casual Premium',
+    subtitle: 'Polos, moletons e corta-ventos das melhores marcas famosas em promoção especial.',
     discount: 'Até 25% OFF',
     bannerUrl: 'https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=1200&auto=format&fit=crop',
     isActive: true,
-    categoryFilter: 'Casacos'
+    categoryFilter: 'Casual'
   },
   {
     id: 'promo-2',
-    title: 'Festival da Camiseta',
-    subtitle: 'Suas roupas preferidas de algodão oversized e estampas em oferta especial.',
-    discount: 'Compre 3 por R$ 170',
+    title: 'Streetwear Exclusivo',
+    subtitle: 'Camisetas oversized e jeans destroyed inspirados no streetwear das grifes mais valiosas.',
+    discount: 'Compre 2 com Frete Grátis',
     bannerUrl: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=1200&auto=format&fit=crop',
     isActive: true,
-    categoryFilter: 'Camisetas'
+    categoryFilter: 'Street'
   }
 ];
 
 // LocalStorage Persistence Helpers
 const LOCAL_STORAGE_KEYS = {
-  PRODUCTS: 'motomodas_products',
-  PROMOTIONS: 'motomodas_promotions',
-  ORDERS: 'motomodas_orders',
+  PRODUCTS: 'motomodas_products_v2',
+  PROMOTIONS: 'motomodas_promotions_v2',
+  ORDERS: 'motomodas_orders_v2',
 };
 
 function getLocalData<T>(key: string, backup: T[]): T[] {
