@@ -9,7 +9,9 @@ import {
   Award,
   ChevronRight,
   ShieldCheck,
-  CheckCircle2
+  CheckCircle2,
+  Instagram,
+  ExternalLink
 } from 'lucide-react';
 
 import Header from './components/Header';
@@ -316,23 +318,136 @@ export default function App() {
       </main>
 
       {/* FOOTER OUTLINE */}
-      <footer className="border-t-2 border-black bg-zinc-950 py-8 px-4 text-center text-xs text-zinc-500 self-stretch mt-12 relative z-10">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-left space-y-1">
-            <h4 className="font-extrabold text-sm text-zinc-350">Bomb Street Art Recife</h4>
-            <p className="text-[11.5px] text-zinc-400 font-mono">
-              Avenida Antonio Jacome Bezerra, N: 9 C, Jaboatão dos Guararapes - PE, CEP: 54220-240
+      <footer className="border-t-2 border-black bg-zinc-950/90 backdrop-blur-md pt-12 pb-8 px-6 text-xs text-zinc-500 self-stretch mt-12 relative z-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 text-left">
+          
+          {/* LOJA INFO */}
+          <div className="space-y-4">
+            <div className="flex items-center gap-2">
+              <div className="bg-[#e6ff00] text-black font-black px-2 py-0.5 text-sm uppercase tracking-wider border border-black shadow-[1.5px_1.5px_0px_0px_rgba(0,0,0,1)]">
+                JM
+              </div>
+              <h4 className="font-extrabold text-sm text-zinc-200 tracking-wider">MOTA MODAS</h4>
+            </div>
+            
+            <p className="text-zinc-400 font-medium leading-relaxed">
+              Sua curadoria de marcas famosas do mercado. Vista os estilos mais desejados: casual, social e street com máxima autenticidade e preço justo.
             </p>
+
+            <div className="space-y-2 mt-4 text-[11px] text-zinc-400 font-mono">
+              <div className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 text-[#e6ff00] shrink-0 mt-0.5" />
+                <span>
+                  Avenida Antonio Jacome Bezerra, N: 9 C<br />
+                  Jaboatão dos Guararapes - PE<br />
+                  CEP: 54220-240
+                </span>
+              </div>
+            </div>
+
+            <div className="pt-2">
+              <a 
+                href="https://api.whatsapp.com/send?l=pt-BR&phone=5581985555951&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20roupas%20da%20JM%2520Mota%2520Modas."
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 bg-[#e6ff00] hover:bg-white text-black font-black uppercase text-[10px] tracking-widest py-2 px-3 border border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:translate-x-[1px] active:translate-y-[1px] active:shadow-none transition-all rounded-none"
+              >
+                <span>Fale no WhatsApp</span>
+                <span className="font-mono text-[9px] bg-black text-white px-1 py-0.2 rounded-none">81 98555-5951</span>
+              </a>
+            </div>
           </div>
 
-          <div className="flex items-center gap-4 text-zinc-400 font-bold">
-            <span className="flex items-center gap-1"><ShieldCheck className="w-4 h-4 text-[#e6ff00]" /> Garantia Bomb Street</span>
-            <span className="text-zinc-700 font-normal">|</span>
-            <span className="flex items-center gap-1 text-xs text-zinc-400 font-mono">CNPJ: 45.289.479/0001-81</span>
+          {/* SOCIALS & CONNECTION */}
+          <div className="space-y-4">
+            <h4 className="font-extrabold text-xs text-white uppercase tracking-widest border-l-2 border-[#e6ff00] pl-2 font-mono">
+              Instas Oficiais
+            </h4>
+            
+            <div className="space-y-3">
+              <a 
+                href="https://www.instagram.com/jm_mmota/" 
+                target="_blank" 
+                rel="noreferrer"
+                className="flex items-center justify-between p-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-[#e6ff00] text-zinc-300 hover:text-white transition-all group"
+              >
+                <div className="flex items-center gap-2">
+                  <Instagram className="w-4 h-4 text-[#e6ff00]" />
+                  <span className="font-mono text-xs font-bold">@jm_mmota</span>
+                </div>
+                <div className="flex items-center gap-1.5 text-[9px] font-black uppercase tracking-wider text-zinc-500 group-hover:text-[#e6ff00] transition-colors">
+                  <span>Siga a Loja</span>
+                  <ExternalLink className="w-3 h-3" />
+                </div>
+              </a>
+
+              <a 
+                href="https://www.instagram.com/rickzinx_/" 
+                target="_blank" 
+                rel="noreferrer"
+                className="flex items-center justify-between p-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-[#e6ff00] text-zinc-300 hover:text-white transition-all group"
+              >
+                <div className="flex items-center gap-2">
+                  <Instagram className="w-4 h-4 text-[#e6ff00]" />
+                  <span className="font-mono text-xs">@rickzinx_</span>
+                </div>
+                <div className="flex items-center gap-1.5 text-[9px] font-black uppercase tracking-wider text-zinc-500 group-hover:text-[#e6ff00] transition-colors">
+                  <span>Criador do Site</span>
+                  <ExternalLink className="w-3 h-3" />
+                </div>
+              </a>
+            </div>
+
+            <div className="pt-2 flex items-center gap-3 text-zinc-400 font-bold text-[11px] font-mono">
+              <span className="flex items-center gap-1"><ShieldCheck className="w-3.5 h-3.5 text-[#e6ff00]" /> Garantia JM Mota Modas</span>
+            </div>
           </div>
 
-          <p className="text-[10px] font-mono text-zinc-650">
-            © 2026 Bomb Street Art Ltda. Todos os direitos reservados.
+          {/* DESENVOLVIDO POR */}
+          <div className="space-y-4">
+            <h4 className="font-extrabold text-xs text-white uppercase tracking-widest border-l-2 border-[#e6ff00] pl-2 font-mono">
+              Desenvolvimento
+            </h4>
+            
+            <p className="text-zinc-400 leading-relaxed font-mono text-[11px]">
+              Este site de altíssima performance foi desenhado e programado por experts com foco em velocidade e conversão de vendas.
+            </p>
+
+            <div className="grid grid-cols-2 gap-2">
+              <a 
+                href="https://www.instagram.com/ecos__agency/" 
+                target="_blank" 
+                rel="noreferrer"
+                className="flex flex-col p-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-[#e6ff00] text-zinc-300 hover:text-white transition-all group"
+              >
+                <span className="text-[10px] font-bold text-zinc-400 group-hover:text-[#e6ff00] transition-colors uppercase font-mono">Ecos Agency</span>
+                <span className="text-[9px] text-zinc-500 mt-0.5 flex items-center gap-1">@ecos__agency <ExternalLink className="w-2.5 h-2.5" /></span>
+              </a>
+
+              <a 
+                href="https://www.instagram.com/techify.oficial/" 
+                target="_blank" 
+                rel="noreferrer"
+                className="flex flex-col p-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-[#e6ff00] text-zinc-300 hover:text-white transition-all group"
+              >
+                <span className="text-[10px] font-bold text-zinc-400 group-hover:text-[#e6ff00] transition-colors uppercase font-mono">Techify</span>
+                <span className="text-[9px] text-zinc-500 mt-0.5 flex items-center gap-1">@techify.oficial <ExternalLink className="w-2.5 h-2.5" /></span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        {/* BOTTOM RIGHTS BAR */}
+        <div className="border-t border-zinc-900 pt-6 max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left text-zinc-650">
+          <p className="text-[10px] font-mono uppercase tracking-wider">
+            © 2026 JM Mota Modas. Todos os direitos reservados.
+          </p>
+          <p className="text-[9px] font-mono uppercase tracking-wider text-zinc-500 flex items-center justify-center sm:justify-start gap-1 flex-wrap">
+            <span>PROJETADO POR</span>
+            <a href="https://www.instagram.com/rickzinx_/" target="_blank" rel="noreferrer" className="text-[#e6ff00] hover:underline font-bold">@rickzinx_</a>
+            <span>• PARCERIA</span>
+            <span className="text-zinc-400">ECOS & TECHIFY</span>
           </p>
         </div>
       </footer>

@@ -47,7 +47,7 @@ export default function CartDrawer({
     const formattedTotal = cartTotal.toFixed(2).replace('.', ',');
     const lineBreak = '%0A';
     
-    let message = `*🏍️ MOTO MODAS - NOVO PEDIDO* [ID #${orderId}]${lineBreak}`;
+    let message = `*✨ MOTA MODAS - NOVO PEDIDO* [ID #${orderId}]${lineBreak}`;
     message += `----------------------------------------${lineBreak}`;
     message += `*Cliente:* ${customerName}${lineBreak}`;
     if (customerPhone) message += `*WhatsApp:* ${customerPhone}${lineBreak}`;
@@ -148,7 +148,7 @@ export default function CartDrawer({
             className="absolute inset-0 bg-black/80 backdrop-blur-xs"
           />
 
-          <div className="absolute inset-y-0 right-0 max-w-full flex pl-10">
+          <div className="absolute inset-y-0 right-0 max-w-full flex pl-0 sm:pl-10">
             <motion.div
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
@@ -206,10 +206,10 @@ export default function CartDrawer({
                 </div>
               ) : (
                 /* Items & Checkout Fields */
-                <div className="flex-1 flex flex-col h-full overflow-hidden">
+                <div className="flex-1 overflow-y-auto flex flex-col h-full scrollbar-thin scrollbar-thumb-zinc-800">
                   
                   {/* Item List section */}
-                  <div className="flex-1 overflow-y-auto px-6 py-4 space-y-4 division">
+                  <div className="px-4 sm:px-6 py-4 space-y-3 sm:space-y-4 division">
                     {cartItems.map((item, idx) => (
                       <div 
                         key={`${item.product.id}-${item.chosenSize}-${item.chosenColor}`}
@@ -272,7 +272,7 @@ export default function CartDrawer({
                   </div>
 
                   {/* Checkout Fields form */}
-                  <div className="bg-zinc-900 border-t border-zinc-850 p-6 space-y-4">
+                  <div className="bg-zinc-900 border-t border-zinc-850 p-4 sm:p-6 space-y-3.5 sm:space-y-4 mt-auto">
                     
                     {/* Customer info */}
                     <div className="space-y-2.5">

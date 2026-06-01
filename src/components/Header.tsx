@@ -27,7 +27,7 @@ export default function Header({
 
   const handleContactClick = () => {
     // Open WhatsApp link or scroll to map coordinates
-    window.open('https://api.whatsapp.com/send?phone=5581985555951&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20roupas%20da%20Moto%2520Modas.', '_blank');
+    window.open('https://api.whatsapp.com/send?l=pt-BR&phone=5581985555951&text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20roupas%20da%20JM%20Mota%20Modas.', '_blank');
   };
 
   return (
@@ -41,7 +41,7 @@ export default function Header({
           </div>
           <div className="flex flex-col justify-center min-h-[36px]">
             <MorphingLogoText 
-              texts={['MOTO MODAS', 'MOTO ESTILO', 'MOTO ORIGINAL', 'MOTO MODAS']} 
+              texts={['MOTA MODAS', 'MOTA CASUAL', 'MOTA SOCIAL', 'MOTA STREET', 'MOTA MODAS']} 
               className="w-44"
             />
           </div>
@@ -80,7 +80,7 @@ export default function Header({
             </button>
 
             <a 
-              href="https://instagram.com" 
+              href="https://www.instagram.com/jm_mmota/" 
               target="_blank" 
               rel="noreferrer" 
               className="text-zinc-300 hover:text-[#e6ff00] transition-colors"

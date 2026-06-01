@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Product, Promotion, CartItem } from '../types';
 import { GlassEffect } from './GlassEffect';
 import InteractiveWaveShader from './InteractiveWaveShader';
+import { MagneticText } from './MagneticText';
 
 interface CatalogViewProps {
   products: Product[];
@@ -82,17 +83,87 @@ export default function CatalogView({ products, promotions, onAddToCart }: Catal
         {/* Massive Background Outlined Text */}
         <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 z-0 flex items-center justify-center select-none pointer-events-none opacity-5 overflow-hidden">
           <span className="text-[12rem] sm:text-[24rem] font-black italic uppercase tracking-tighter text-white font-mono leading-none">
-            MOTO
+            MOTA
           </span>
         </div>
 
         {/* Content Elements on Top */}
         <div className="relative z-10 w-full flex flex-col items-center">
           
+          {/* Premium Centerpiece Designer Card - Recreating the high-end Mota Modas visual logo */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.1 }}
+            className="w-full max-w-4xl bg-black border-2 border-zinc-900 rounded-none shadow-[6px_6px_0px_0px_rgba(230,255,0,0.85)] flex flex-col items-center justify-center p-8 sm:p-14 mb-10 relative overflow-hidden group select-none"
+          >
+            {/* Subtle flow background layer inside the brand card */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-zinc-950 via-zinc-950 to-[#e6ff00]/5 pointer-events-none" />
+            
+            {/* Elegant SVG Double-Line Monogram 'M' */}
+            <div className="relative z-10 flex flex-col items-center text-center">
+              <svg 
+                viewBox="0 0 300 180" 
+                className="w-40 sm:w-52 md:w-60 text-white drop-shadow-[0_2px_12px_rgba(255,255,255,0.06)]" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                {/* Outer M line */}
+                <path 
+                  d="M 65,160 L 65,30 L 150,145 L 235,30 L 235,160" 
+                  stroke="currentColor" 
+                  strokeWidth="5.5" 
+                  strokeLinejoin="miter" 
+                  strokeLinecap="butt" 
+                />
+                {/* Inner M line */}
+                <path 
+                  d="M 82,160 L 82,55 L 150,122 L 218,55 L 218,160" 
+                  stroke="currentColor" 
+                  strokeWidth="5.5" 
+                  strokeLinejoin="miter" 
+                  strokeLinecap="butt" 
+                />
+                {/* Left foot connector */}
+                <path 
+                  d="M 65,160 H 82" 
+                  stroke="currentColor" 
+                  strokeWidth="5.5" 
+                  strokeLinecap="butt" 
+                />
+                {/* Right foot connector */}
+                <path 
+                  d="M 218,160 H 235" 
+                  stroke="currentColor" 
+                  strokeWidth="5.5" 
+                  strokeLinecap="butt" 
+                />
+              </svg>
+
+              {/* MOTA MODAS Typographies matching the luxury branding design */}
+              <MagneticText 
+                text="MOTA MODAS" 
+                hoverText="MOTA MODAS"
+                className="mt-6"
+                textClassName="text-3xl sm:text-5xl md:text-6xl font-extralight tracking-[0.35em] text-white uppercase select-none pl-[0.35em] font-sans"
+                hoverTextClassName="text-3xl sm:text-5xl md:text-6xl font-black tracking-[0.35em] text-black uppercase pl-[0.35em] font-sans"
+                circleSize={180}
+              />
+              <span className="text-[10px] sm:text-xs font-semibold tracking-[0.55em] text-zinc-400 uppercase mt-2.5 pl-[0.55em] font-sans select-none block">
+                MOTA MODAS
+              </span>
+              
+              <p className="text-[7.5px] sm:text-[9px] text-zinc-650 font-mono tracking-widest mt-8 sm:mt-12 uppercase select-none opacity-80">
+                © 2026 MOTA MODAS. Todos os direitos reservados.
+              </p>
+            </div>
+          </motion.div>
+
           {/* Neon Yellow Badge */}
           <motion.div 
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
             className="inline-block bg-[#e6ff00] text-black text-[10px] sm:text-xs font-black uppercase tracking-widest px-3 py-1 mb-6 rounded-none font-mono border border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
           >
             COLEÇÃO 2024 / RECIFE, PE
@@ -102,6 +173,7 @@ export default function CatalogView({ products, promotions, onAddToCart }: Catal
           <motion.h2 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.3 }}
             className="text-4.5xl sm:text-6xl md:text-7xl lg:text-8xl font-sans italic font-black uppercase leading-[0.85] text-white tracking-wider text-center select-none mb-4 flex flex-col items-center"
           >
             <span className="block drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">MARCAS</span>
@@ -114,36 +186,11 @@ export default function CatalogView({ products, promotions, onAddToCart }: Catal
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: 0.4 }}
             className="text-xs sm:text-sm font-mono tracking-widest text-center text-zinc-300 max-w-xl px-4 uppercase mb-12 font-bold leading-relaxed"
           >
             Venda de roupas das principais marcas famosas do mercado. Encontre os estilos imperativos: <span className="text-[#e6ff00]">CASUAL</span> • <span className="text-[#e6ff00]">SOCIAL</span> • <span className="text-[#e6ff00]">STREET</span> com a máxima exclusividade.
           </motion.p>
-
-          {/* 4 Tall Streetwear Model Photos in red brick background */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-5xl w-full px-2 mb-10">
-            {[
-              "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&auto=format&fit=crop&q=80",
-              "https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&auto=format&fit=crop&q=80",
-              "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=600&auto=format&fit=crop&q=80",
-              "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&auto=format&fit=crop&q=80"
-            ].map((imgUrl, idx) => (
-              <motion.div 
-                key={idx}
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.1 }}
-                className="aspect-[3/4.2] border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] bg-zinc-950 overflow-hidden relative group rounded-none"
-              >
-                <img
-                  referrerPolicy="no-referrer"
-                  src={imgUrl}
-                  alt={`Coleção Moto Modas ${idx + 1}`}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </motion.div>
-            ))}
-          </div>
 
           {/* Hero Buttons block */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md px-4">
@@ -178,13 +225,13 @@ export default function CatalogView({ products, promotions, onAddToCart }: Catal
         <div className="flex animate-marquee whitespace-nowrap gap-12 text-xs font-black italic text-black uppercase tracking-widest">
           {/* We repeat the pattern enough to span multiple screen widths */}
           <div className="flex shrink-0 items-center gap-12 uppercase font-black font-mono">
-            <span>RECIFE</span> <span>🏍️</span> <span>MOTO ESTILO</span> <span>✦</span> <span>ORIGINAL</span> <span>🏍️</span> <span>URBAN CULTURE</span> <span>✦</span> <span>STREETWEAR</span> <span>🏍️</span> <span>MOTO MODAS</span> <span>✦</span>
+            <span>RECIFE</span> <span>✨</span> <span>MOTA ESTILO</span> <span>✦</span> <span>ORIGINAL</span> <span>✨</span> <span>URBAN CULTURE</span> <span>✦</span> <span>STREETWEAR</span> <span>✨</span> <span>MOTA MODAS</span> <span>✦</span>
           </div>
           <div className="flex shrink-0 items-center gap-12 uppercase font-black font-mono">
-            <span>RECIFE</span> <span>🏍️</span> <span>MOTO ESTILO</span> <span>✦</span> <span>ORIGINAL</span> <span>🏍️</span> <span>URBAN CULTURE</span> <span>✦</span> <span>STREETWEAR</span> <span>🏍️</span> <span>MOTO MODAS</span> <span>✦</span>
+            <span>RECIFE</span> <span>✨</span> <span>MOTA ESTILO</span> <span>✦</span> <span>ORIGINAL</span> <span>✨</span> <span>URBAN CULTURE</span> <span>✦</span> <span>STREETWEAR</span> <span>✨</span> <span>MOTA MODAS</span> <span>✦</span>
           </div>
           <div className="flex shrink-0 items-center gap-12 uppercase font-black font-mono">
-            <span>RECIFE</span> <span>🏍️</span> <span>MOTO ESTILO</span> <span>✦</span> <span>ORIGINAL</span> <span>🏍️</span> <span>URBAN CULTURE</span> <span>✦</span> <span>STREETWEAR</span> <span>🏍️</span> <span>MOTO MODAS</span> <span>✦</span>
+            <span>RECIFE</span> <span>✨</span> <span>MOTA ESTILO</span> <span>✦</span> <span>ORIGINAL</span> <span>✨</span> <span>URBAN CULTURE</span> <span>✦</span> <span>STREETWEAR</span> <span>✨</span> <span>MOTA MODAS</span> <span>✦</span>
           </div>
         </div>
       </div>
